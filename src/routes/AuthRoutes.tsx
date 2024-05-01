@@ -8,19 +8,23 @@ import Resetting from "../pages/auth/password/Resetting";
 const AuthRoutes = [
     {
         path: "/auth/login",
-        element: <Login />
+        element: <Login />,
+        name: "로그인 페이지"
     },
     {
         path: "/auth/join/result",
-        element: <Result />
+        element: <Result />,
+        name: "회원가입 후 이메일 알림 페이지"
     },
     {
         path: "/auth/join/input",
-        element: <Input />
+        element: <Input />,
+        name: "회원가입 정보 입력 페이지"
     },
     {
         path: "/auth/join/selector",
-        element: <Selector />
+        element: <Selector />,
+        name: "회원가입 방식 선택 페이지"
     },
     {
         path: "/auth/password/finder",
