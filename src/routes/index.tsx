@@ -9,11 +9,13 @@ import StudyRoutes from "./StudyRoutes";
 const routes = [
     {
         path: "/",
-        element: <Index />
+        element: <Index />,
+        name: '색인 페이지',
     },
     {
         path: "/main",
-        element: <Main />
+        element: <Main />,
+        name: '메인 페이지'
     },
     ...AuthRoutes,
     ...MemberRoutes,
