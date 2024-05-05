@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import prevButtonImg from '../img/prev_btn.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default function PrevButton(props: PrevButtonProps) {
+    // props
+    const { to } = props;
+
+    // hook
+    const navigate = useNavigate();
+
+    // Style
     const BaseButton = styled.button`
         display: grid;
         grid-auto-flow: column;
@@ -22,12 +30,8 @@ export default function PrevButton(props: PrevButtonProps) {
         line-height: 20px;
     `;
 
-    function onClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-        if (props.onClick) props.onClick(event);
-    }
-
     return (
-        <BaseButton onClick={onClick}>
+        <BaseButton onClick={() => navigate(to || '')}>
             <img src={prevButtonImg} />
             <BaseText>이전으로</BaseText>
         </BaseButton>

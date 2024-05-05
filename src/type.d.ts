@@ -28,8 +28,22 @@ declare interface LinkProps {
 }
 
 declare interface GridProps {
+    margin?: string;
+    width?: string;
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
     gridAutoFlow?: "column" | "row" | "dense" | "row dense" | "column dense";
     rowGap?: string | "normal" | "initial" | "inherit";
     columnGap?: string | "normal" | "initial" | "inherit";
+}
+
+declare interface PrevButtonProps {
+    to?: string;
+}
+
+declare interface AuthFormProps {
+    isShowPrevButton?: boolean;
+    to?: string;
+    title: string;
+    description: React.ReactNode;
+    children?: React.ReactNode;
 }

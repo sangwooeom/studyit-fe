@@ -1,25 +1,16 @@
 import Header from '../../components/Header';
-import Heading from '../../components/Heading';
-import Text from '../../components/Text';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { ButtonType } from '../../enum';
 import Link from '../../components/Link';
 import Grid from '../../components/Grid';
-import AuthContainer from '../../components/AuthContainer';
+import AuthForm from '../../components/AuthForm';
 
 export default function Login() {
     return (
         <>
             <Header />
-            <AuthContainer rowGap='40px'>
-                <Grid rowGap='10px'>
-                    <Heading lineHeight={40} fontSize={32}>로그인</Heading>
-                    <Text color='#667085' fontSize={14} lineHeight={22}>
-                        환영합니다. <br />
-                        로그인 후 스터딧해보세요!
-                    </Text>
-                </Grid>
+            <AuthForm title="로그인" description={(<>환영합니다.<br/>로그인 후 스터딧해보세요!</>)}>
                 <Grid rowGap='20px'>
                     <Input label='이메일' placeholder='example@studiy.com'/>
                     <Input label='비밀번호' placeholder='비밀번호를 입력해 주세요'/>
@@ -35,7 +26,7 @@ export default function Login() {
                         <Link to="/auth/password/finder">비밀번호 찾기</Link>
                     </Grid>
                 </Grid>
-            </AuthContainer>
+            </AuthForm>
         </>
     )
 }
