@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import Text from "./Text";
+import Grid from "./Grid";
 
 export default function Input(props: InputProps) {
-    const { label, placeholder } = props;
+    const { label, placeholder, type, description } = props;
 
     const BaseInput = styled.input`
         border: 1px solid #E4E7EC;
@@ -16,20 +17,18 @@ export default function Input(props: InputProps) {
             color: #98A2B3;
         }
     `;
-
-    const Container = styled.div`
-        display: grid;
-        row-gap: 8px;
-    `
-
+    
     function onInput(event: React.FormEvent<HTMLInputElement>) {
         if (props.onInput) props.onInput(event);
     }
 
     return (
-        <Container>
+        <Grid rowGap="8px">
             {label && <Text color='#667085' fontSize={16} lineHeight={20}>{label}</Text>}
-            <BaseInput onInput={onInput} placeholder={placeholder || ''}/>
-        </Container>
+            <Grid rowGap="6px">
+                <BaseInput onInput={onInput} placeholder={placeholder || ''} type={type || 'text'}/>
+                {description && <Text color="#667085" fontSize={14}>{description}</Text>}
+            </Grid>
+        </Grid>
     )
 }

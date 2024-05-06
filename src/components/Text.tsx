@@ -6,6 +6,7 @@ const Text = styled.p<TextProps>`
     letter-spacing: -1px;
     font-size: ${props => props.fontSize || '15'}px;
     line-height: ${props => props.lineHeight}px;
+    text-align: ${props => props.textAlign || "initial"};
 `;
 
 export default Text;

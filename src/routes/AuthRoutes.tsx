@@ -1,6 +1,6 @@
 import Login from "../pages/auth/Login"
 import Result from "../pages/auth/join/Result"
-import Input from "../pages/auth/join/Input";
+import Info from "../pages/auth/join/Info";
 import Selector from "../pages/auth/join/Selector";
 import Finder from "../pages/auth/password/Finder";
 import Resetting from "../pages/auth/password/Resetting";
@@ -17,8 +17,8 @@ const AuthRoutes = [
         name: "회원가입 후 이메일 알림 페이지"
     },
     {
-        path: "/auth/join/input",
-        element: <Input />,
+        path: "/auth/join/info",
+        element: <Info />,
         name: "회원가입 정보 입력 페이지"
     },
     {

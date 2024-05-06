@@ -2,6 +2,7 @@ declare interface TextProps {
     lineHeight?: number;
     color?: string;
     fontSize?: number;
+    textAlign?: "left" | "right" | "center" | "justify" | "initial" | "inherit";
 }
 
 declare interface HeadingProps {
@@ -13,17 +14,21 @@ declare interface HeadingProps {
 declare interface InputProps {
     label?: string;
     placeholder?: string;
+    type?: "text" | "password";
+    description?: string;
     onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
 }
 
 declare interface ButtonProps {
     type: ButtonType;
+    disabled?: boolean;
     children: string;
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 declare interface LinkProps {
-    to: string;
+    to?: string;
+    type: LinkType;
     children: string;
 }
 

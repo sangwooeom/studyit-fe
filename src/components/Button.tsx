@@ -15,7 +15,7 @@ function getBackgroundColor(type: ButtonType): string {
 }
 
 export default function Button(props: ButtonProps) {
-    const { type, children } = props;
+    const { type, children, disabled } = props;
 
     const BaseButton = styled.button`
         display: grid;
@@ -33,13 +33,18 @@ export default function Button(props: ButtonProps) {
         border: ${type === ButtonType.GOOGLE_BUTTON ? "1px solid #E4E7EC" : "none"};
         color: ${type === ButtonType.PRIMARY_BUTTON ? "#FFFFFF" : "#101828"};
         background-color: ${getBackgroundColor(type)};
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: initial;
+        }
     `;
 
     function onClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         if (props.onClick) props.onClick(event);
     }
     return (
-        <BaseButton onClick={onClick}>
+        <BaseButton onClick={onClick} disabled={disabled}>
             {type == ButtonType.KAKAO_BUTTON && <img src={kakaoicon} />}
             {type == ButtonType.GOOGLE_BUTTON && <img src={googleicon} />}
             {children || ""}

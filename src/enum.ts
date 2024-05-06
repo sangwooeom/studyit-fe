@@ -4,4 +4,9 @@ enum ButtonType {
     PRIMARY_BUTTON = "기본"
 }
 
-export { ButtonType };
+enum LinkType {
+    PRIMARY_LINK,
+    EMAIL_RESAND_LINK
+}
+
+export { ButtonType, LinkType };
