@@ -9,4 +9,10 @@ enum LinkType {
     EMAIL_RESAND_LINK
 }
 
-export { ButtonType, LinkType };
+enum ValidationType {
+    NORMAL,
+    VALIDATE,
+    NON_VALIDATE
+}
+
+export { ButtonType, LinkType, ValidationType };

@@ -14,9 +14,13 @@ declare interface HeadingProps {
 declare interface InputProps {
     label?: string;
     placeholder?: string;
-    type?: "text" | "password";
+    type: "text" | "password";
     description?: string;
+    errorMessage?: string;
     onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onBlur?: (event: React.FocusEvent<HTMLInputElement, Element>) => void;
+    validate?: (value: string) => boolean;
 }
 
 declare interface ButtonProps {
@@ -39,6 +43,10 @@ declare interface GridProps {
     gridAutoFlow?: "column" | "row" | "dense" | "row dense" | "column dense";
     rowGap?: string | "normal" | "initial" | "inherit";
     columnGap?: string | "normal" | "initial" | "inherit";
+    border?: string;
+    borderRadius?: string;
+    backgroundColor?: string;
+    gridTemplateColumns?: string;
 }
 
 declare interface PrevButtonProps {
@@ -51,4 +59,8 @@ declare interface AuthFormProps {
     title: string;
     description: React.ReactNode;
     children?: React.ReactNode;
+}
+
+declare interface IconButtonProps {
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
