@@ -1,0 +1,65 @@
+@use '../color';
+
+@mixin text--color($color) {
+    color: $color;
+}
+
+@mixin text--font-size($font-size) {
+    font-size: $font-size;
+}
+
+@mixin text--line-height($line-height) {
+    line-height: $line-height;
+}
+
+@mixin text--text-align($text-align) {
+    text-align: $text-align;
+}
+
+.text {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+
+// font-size
+.text--font-size-14px {
+    @include text--font-size(14px);
+}
+
+.text--font-size-16px {
+    @include text--font-size(14px);
+}
+
+//
+
+// lien-height
+.text--line-height-20px {
+    @include text--line-height(20px);
+}
+
+.text--line-height-22px {
+    @include text--line-height(22px);
+}
+
+.text--line-height-26px {
+    @include text--line-height(26px);
+}
+
+//
+
+// color
+.text--color-gray-500 {
+    @include text--color(color.$gray-500);
+}
+
+.text--color-red {
+    @include text--color(color.$red);
+}
+
+//
+
+// text-align
+.text--text-align-center {
+    @include text--text-align(center);
+}

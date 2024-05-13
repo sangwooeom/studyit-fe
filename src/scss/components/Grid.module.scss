@@ -1,0 +1,146 @@
+@use '../color';
+
+@mixin grid--margin($margin) {
+    margin: $margin;
+}
+
+@mixin grid--padding($padding) {
+    padding: $padding;
+}
+
+@mixin grid--row-gap($row-gap) {
+    row-gap: $row-gap;
+}
+
+@mixin grid--width($width) {
+    width: $width;
+}
+
+.grid {
+    display: grid;
+    margin: 0;
+}
+
+// margin
+.grid--margin-110px-auto-0-auto {
+    @include grid--margin(110px auto 0 auto);
+}
+
+.grid--margin-80px-auto-0-auto {
+    @include grid--margin(80px auto 0 auto);
+}
+
+.grid--margin-0-auto {
+    @include grid--margin(0 auto);
+}
+
+//
+
+// padding
+
+.grid--padding-13px-103px {
+    padding: 13px 103px;
+}
+
+//
+
+// row-gap
+.grid--row-gap-20px {
+    @include grid--row-gap(20px);
+}
+
+.grid--row-gap-40px {
+    @include grid--row-gap(40px);
+}
+
+.grid--row-gap-12px {
+    @include grid--row-gap(12px);
+}
+
+.grid--row-gap-15px {
+    @include grid--row-gap(15px);
+}
+
+.grid--row-gap-10px {
+    @include grid--row-gap(10px);
+}
+
+.grid--row-gap-8px {
+    @include grid--row-gap(8px);
+}
+
+.grid--row-gap-6px {
+    @include grid--row-gap(6px);
+}
+
+//
+
+// column-gap
+.grid--column-gap-36px {
+    column-gap: 36px;
+}
+
+//
+
+// width
+.grid--width-392px {
+    @include grid--width(392px);
+}
+
+.grid--width-400px {
+    @include grid--width(400px);
+}
+
+.grid--width-416px {
+    @include grid--width(416px);
+}
+
+//
+
+// justify-content
+.grid--justify-content-space-between {
+    justify-content: space-between;
+}
+
+.grid--justify-content-start {
+    justify-content: start;
+}
+
+//
+
+// grid-auto-flow
+.grid--grid-auto-flow-column {
+    grid-auto-flow: column;
+}
+
+//
+
+// grid-template-columns
+.grid--grid-template-columns-auto-54px {
+    grid-template-columns: auto 54px;
+}
+
+// border-bottom
+.grid--border-bottom-1px-solid-gray-200 {
+    border-bottom: 1px solid color.$gray-200;
+}
+
+//
+
+// border
+.grid--border-1px-solid-gray-200 {
+    border: 1px solid color.$gray-200;
+}
+
+.grid--border-1px-solid-red {
+    border: 1px solid color.$red;
+}
+
+//
+
+// border-radius
+.grid--border-radius-6px {
+    border-radius: 6px;
+}
+
+//

@@ -1,0 +1,27 @@
+@use '../color';
+
+.link {
+    font-size: 14px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.link--primary {
+    color: color.$gray-500;
+    text-decoration: none;
+}
+
+.link--email {
+    color: color.$blue;
+    text-decoration: underline solid auto color.$blue;
+}
+
+.link--header-link {
+    color: color.$black;
+    font-size: 15px;
+    padding: 7px 0 8px 0;
+    line-height: 19px;
+    text-decoration: none;
+}

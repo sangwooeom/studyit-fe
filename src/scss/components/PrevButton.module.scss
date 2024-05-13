@@ -1,0 +1,22 @@
+$white: #FFFFFF;
+$blue: #175CD3;
+
+.btn {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1px;
+    padding: 8px 1px;
+    border: none;
+    background-color: $white;
+    cursor: pointer;
+
+    .btn__text {
+        margin: 2px 0;
+        color: $blue;
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        letter-spacing: -1px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

@@ -1,12 +1,29 @@
-import styled from "styled-components";
+import cn from 'classnames';
+import styles from '../scss/components/Text.module.scss';
+import { getClassName } from "../utils/commonUtils";
 
-const Text = styled.p<TextProps>`
-    color: ${props => props.color || '#101828'};
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    letter-spacing: -1px;
-    font-size: ${props => props.fontSize || '15'}px;
-    line-height: ${props => props.lineHeight}px;
-    text-align: ${props => props.textAlign || "initial"};
-`;
+export default function Text(props: TextProps) {
+    const {
+        color,
+        fontSize,
+        lineHeight,
+        textAlign,
+        children,
+    } = props;
 
-export default Text;
+    return (
+        <p
+            className={cn(
+                styles['text'],
+                {
+                    [styles[`${getClassName('text--color', color)}`]]: color,
+                    [styles[`${getClassName('text--font-size', fontSize)}`]]: fontSize,
+                    [styles[`${getClassName('text--line-height', lineHeight)}`]]: lineHeight,
+                    [styles[`${getClassName('text--text-align', textAlign)}`]]: textAlign,
+                }
+            )}
+        >
+            {children}
+        </p>
+    )
+}

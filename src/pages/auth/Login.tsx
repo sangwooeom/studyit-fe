@@ -3,13 +3,13 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { ButtonType, LinkType } from '../../enum';
 import Link from '../../components/Link';
-import Grid from '../../components/Grid';
 import AuthForm from '../../components/AuthForm';
+import Grid from '../../components/Grid';
 
-function validateEmail(email: string): boolean {
-    const reg = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    return reg.test(email);
-}
+// function validateEmail(email: string): boolean {
+//     const reg = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+//     return reg.test(email);
+// }
 
 export default function Login() {
     return (
@@ -20,15 +20,12 @@ export default function Login() {
                     <Input 
                         type="text" 
                         label='이메일' 
-                        placeholder='example@studiy.com' 
-                        validate={validateEmail}
-                        errorMessage="올바른 이메일을 입력해 주세요"
+                        placeholder='example@studiy.com'
                     />
                     <Input 
                         type="password" 
                         label='비밀번호' 
                         placeholder='비밀번호를 입력해 주세요'
-                        validate={() => true}
                     />
                 </Grid>
                 <Grid rowGap='15px'>

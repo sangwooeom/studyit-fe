@@ -1,4 +1,4 @@
-.commonInput {
+.input {
     background-color: #FFFFFF;
     font-size: 16px;
     color: #101828;
@@ -9,31 +9,86 @@
     }
 }
 
-.textInput {
+.input--text {
     border: 1px solid #E4E7EC;
     border-radius: 6px;
     padding: 14px 15px;
 }
 
-.passwordInput {
+.input--password {
     border: none;
     border-radius: 6px 0 0 6px;
     padding: 14px 0 14px 15px;
 }
 
-.validation {
-    background-color: #E8F0FE;
-}
-
-.nonVaidation {
-    border-color: #F36355;
-}
-
-.iconButton {
+.iconBtn {
     background-color: inherit;
     border: none;
     margin: 12px 15px;
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid--row-gap-8px {
+    row-gap: 8px;
+}
+
+.grid--row-gap-6px {
+    row-gap: 6px;
+}
+
+.grid--grid-auto-flow-column {
+    grid-auto-flow: column;
+}
+
+.grid--grid-template-columns-auto-54px{
+    grid-template-columns: auto 54px;
+}
+
+.grid--border-radius-6px {
+    border-radius: 6px;
+}
+
+.grid--border-1px-solid-gray {
+    border: 1px solid #E4E7EC
+}
+
+.text {
+    color: #101828;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+
+.text--color-gray {
+    color: #667085;
+}
+
+.text--color-red {
+    color: #F36355;
+}
+
+.text--font-size-14px {
+    font-size: 14px;
+}
+
+.text--font-size-16px {
+    font-size: 16px;
+}
+
+.text--line-height-20px {
+    line-height: 20px;
+}
+
+.warning {
+    border-color: #F36355;
+}
+
+.right {
+    background-color: #E8F0FE;
 }

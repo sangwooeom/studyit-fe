@@ -1,11 +1,27 @@
-import styled from "styled-components";
+import cn from 'classnames';
+import styles from '../scss/components/Heading.module.scss';
+import { getClassName } from "../utils/commonUtils";
 
-const Heading = styled.h1<HeadingProps>`
-    color: ${props => props.color || '#101828'};
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    letter-spacing: -1px;
-    font-size: ${props => props.fontSize || '32'}px;
-    line-height: ${props => props.lineHeight}px;
-`;
+export default function Heading(props: HeadingProps) {
+    const {
+        color,
+        fontSize,
+        lineHeight,
+        children
+    } = props;
 
-export default Heading;
+    return (
+        <h1
+            className={cn(
+                styles['headding'],
+                {
+                    [styles[`${getClassName('heading--color', color)}`]]: color,
+                    [styles[`${getClassName('heading--font-size', fontSize)}`]]: fontSize,
+                    [styles[`${getClassName('heading--line-height', lineHeight)}`]]: lineHeight,
+                }
+            )}
+        >
+            {children}
+        </h1>
+    )
+}

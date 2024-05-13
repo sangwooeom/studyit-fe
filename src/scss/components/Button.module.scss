@@ -1,0 +1,49 @@
+@use '../color';
+
+.btn {
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    line-height: 20px;
+    cursor: pointer;
+    border: none;
+    color: color.$white;
+    background-color: color.$blue;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: initial;
+    }
+}
+
+.btn--kakao {
+    display: grid;
+    column-gap: 10px;
+    grid-auto-flow: column;
+    justify-content: center;
+    color: color.$black;
+    background-color: color.$yellow;
+}
+
+.btn--google {
+    display: grid;
+    column-gap: 10px;
+    grid-auto-flow: column;
+    justify-content: center;
+    border: 1px solid color.$gray-200;
+    color: color.$black;
+    background-color: color.$white;
+}
+
+.btn--study-create-btn {
+    padding: 7px 12px;
+    border: 1px solid color.$gray-200;
+    border-radius: 18px;
+    background: color.$white;
+    font-size: 14px;
+    color: color.$blue;
+    font-weight: 700;
+    line-height: 18px;
+}

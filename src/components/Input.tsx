@@ -1,11 +1,11 @@
-import Text from "./Text";
-import Grid from "./Grid";
 import { useState } from "react";
 import styles from '../scss/components/input.module.scss';
 import cn from "classnames";
 import visibilityOffIcon from '../img/ic_visibility_off_24dp.svg';
 import visibilityOnIcon from '../img/ic_visibility_on_24dp.svg';
 import { ValidationType } from "../enum";
+import Grid from "./Grid";
+import Text from "./Text";
 
 function getIconImg(hide: boolean): string {
     return hide ? visibilityOffIcon : visibilityOnIcon;
@@ -40,15 +40,17 @@ export default function Input(props: InputProps) {
 
     return (
         <Grid rowGap="8px">
-            {label && <Text color='#667085' fontSize={16} lineHeight={20}>{label}</Text>}
+            {label && <Text color="gray-500" fontSize="16px" lineHeight="20px">{label}</Text>}
             <Grid rowGap="6px">
                 {type === "text" && 
                     <input
                         className={cn(
-                            styles.commonInput, 
-                            styles.textInput,
-                            validation === ValidationType.VALIDATE && styles.validation,
-                            validation === ValidationType.NON_VALIDATE && styles.nonVaidation
+                            styles['input'], 
+                            styles['input--text'],
+                            {
+                                [styles['right']]: validation === ValidationType.VALIDATE,
+                                [styles['warning']]: validation === ValidationType.NON_VALIDATE
+                            }
                         )}
                         onInput={onInput} 
                         onChange={onChange}
@@ -58,17 +60,14 @@ export default function Input(props: InputProps) {
                     />
                 }
                 {type === "password" && 
-                <Grid 
-                    gridAutoFlow="column" 
-                    gridTemplateColumns="auto 54px" 
-                    border={validation === ValidationType.NON_VALIDATE ? "1px solid #F36355" : "1px solid #E4E7EC"} 
-                    borderRadius="6px"
-                    backgroundColor="#000000">
+                <Grid gridAutoFlow="column" gridTemplateColumns="auto 54px" borderRadius="6px" border="1px solid gray-200">
                     <input 
                         className={cn(
-                            styles.commonInput, 
-                            styles.passwordInput,
-                            validation === ValidationType.VALIDATE && styles.validation
+                            styles['input'], 
+                            styles['input--password'],
+                            {
+                                [styles['right']]: validation === ValidationType.VALIDATE,
+                            }
                         )}
                         onInput={onInput} 
                         onChange={onChange}
@@ -78,16 +77,18 @@ export default function Input(props: InputProps) {
                     />
                     <button 
                         className={cn(
-                            styles.iconButton,
-                            validation === ValidationType.VALIDATE && styles.validation
+                            styles['iconBtn'],
+                            {
+                                [styles['right']]: validation === ValidationType.VALIDATE,
+                            }
                         )}
                         onClick={() => setHide(!hide)}
                     >
                         <img src={getIconImg(hide)} />
                     </button>
                 </Grid>}
-                {description && <Text color="#667085" fontSize={14}>{description}</Text>}
-                {validation === ValidationType.NON_VALIDATE && errorMessage && <Text color="#F36355" fontSize={14}>{errorMessage}</Text>}
+                {description && <Text color="gray-500" fontSize="14px">{description}</Text>}
+                {validation === ValidationType.NON_VALIDATE && errorMessage && <Text color="red" fontSize="14px">{errorMessage}</Text>}
             </Grid>
         </Grid>
     )

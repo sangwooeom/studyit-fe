@@ -1,12 +1,14 @@
 enum ButtonType {
-    KAKAO_BUTTON = "카카오",
-    GOOGLE_BUTTON = "구글",
-    PRIMARY_BUTTON = "기본"
+    KAKAO_BUTTON,
+    GOOGLE_BUTTON,
+    PRIMARY_BUTTON,
+    STUDY_CREATE_BTTUN,
 }
 
 enum LinkType {
     PRIMARY_LINK,
-    EMAIL_RESAND_LINK
+    EMAIL_RESAND_LINK,
+    HEADER_LINK,
 }
 
 enum ValidationType {
@@ -15,4 +17,8 @@ enum ValidationType {
     NON_VALIDATE
 }
 
-export { ButtonType, LinkType, ValidationType };
+enum ImageType {
+    LOGO_IMG,
+}
+
+export { ButtonType, LinkType, ValidationType, ImageType };

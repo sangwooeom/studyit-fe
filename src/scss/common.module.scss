@@ -1,0 +1,54 @@
+$black: #101828;
+$gray: #667085;
+
+%common-font {
+    color: $black;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+}
+
+@mixin heading($font-size, $line-height) {
+    @extend %common-font;
+    font-weight: bold;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin text($font-size, $line-height) {
+    @extend %common-font;
+    font-weight: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+
+.heading1 {
+    @include heading($font-size: 32px, $line-height: 40px);
+}
+
+.text {
+    @extend %common-font;
+    font-weight: normal;
+}
+
+// 글자 크기
+.fontSize15 {
+    font-size: 15px;
+}
+
+// 폰트 컬러
+.colorBalck {
+    color: $black;
+}
+
+.colorGray {
+    color: $gray;
+}
+
+// 글자 높이
+.lineHeight22 {
+    line-height: 22px;
+}
+
+
+

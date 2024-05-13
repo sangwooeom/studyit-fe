@@ -1,0 +1,35 @@
+@use '../color';
+
+@mixin heading--color($color) {
+    color: $color;
+}
+
+@mixin heading--font-size($font-size) {
+    font-size: $font-size;
+}
+
+@mixin heading--line-height($line-height) {
+    line-height: $line-height;
+}
+
+.heading {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+}
+
+// color
+.heading--color-black {
+    color: color.$black;
+}
+
+// font-size
+.heading--font-size-32px {
+    @include heading--font-size(32px);
+}
+
+//
+
+// line-height
+.heading--line-height-40px {
+    @include heading--line-height(40px);
+}

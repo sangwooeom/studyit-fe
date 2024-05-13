@@ -1,14 +1,16 @@
 declare interface TextProps {
-    lineHeight?: number;
+    lineHeight?: string;
     color?: string;
-    fontSize?: number;
+    fontSize?: string;
     textAlign?: "left" | "right" | "center" | "justify" | "initial" | "inherit";
+    children?: React.ReactNode;
 }
 
 declare interface HeadingProps {
-    lineHeight?: number;
+    lineHeight?: string;
     color?: string;
-    fontSize?: number;
+    fontSize?: string;
+    children?: React.ReactNode;
 }
 
 declare interface InputProps {
@@ -38,15 +40,18 @@ declare interface LinkProps {
 
 declare interface GridProps {
     margin?: string;
+    padding?: string;
     width?: string;
-    justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
+    justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "start" | "initial" | "inherit";
     gridAutoFlow?: "column" | "row" | "dense" | "row dense" | "column dense";
     rowGap?: string | "normal" | "initial" | "inherit";
     columnGap?: string | "normal" | "initial" | "inherit";
     border?: string;
+    borderBottom?: string;
     borderRadius?: string;
     backgroundColor?: string;
     gridTemplateColumns?: string;
+    children?: React.ReactNode;
 }
 
 declare interface PrevButtonProps {
@@ -63,4 +68,18 @@ declare interface AuthFormProps {
 
 declare interface IconButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
+
+declare interface LoginRequest {
+    id: string;
+    password: string;
+}
+
+declare interface LoginResponse {
+    accessToken: string;
+    refreshToken: string;
+}
+
+declare interface ImageProps {
+    type: ImageType;
 }

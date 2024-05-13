@@ -15,7 +15,8 @@ export default function Info() {
             <Grid rowGap="20px">
                 <Input 
                     label="이메일" 
-                    placeholder="example@studyit.com" 
+                    placeholder="example@studyit.com"
+                    type="text"
                 />
                 <Input 
                     label="비밀번호" 
@@ -32,6 +33,7 @@ export default function Info() {
                     label="닉네임" 
                     placeholder="닉네임을 입력해 주세요" 
                     description="한글/영어/숫자 혼용 가능, 최대 10자"
+                    type="text"
                 />
             </Grid>
             <Button type={ButtonType.PRIMARY_BUTTON} disabled={true}>회원가입하기</Button>
