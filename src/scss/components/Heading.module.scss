@@ -23,6 +23,10 @@
 }
 
 // font-size
+.heading--font-size-40px {
+    @include heading--font-size(40px);
+}
+
 .heading--font-size-32px {
     @include heading--font-size(32px);
 }
@@ -32,4 +36,8 @@
 // line-height
 .heading--line-height-40px {
     @include heading--line-height(40px);
+}
+
+.heading--line-height-55px {
+    @include heading--line-height(55px);
 }

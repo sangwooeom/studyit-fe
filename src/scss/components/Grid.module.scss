@@ -16,6 +16,18 @@
     width: $width;
 }
 
+@mixin grid--height($height) {
+    height: $height;
+}
+
+@mixin grid--box-sizing($box-sizing) {
+    box-sizing: $box-sizing;
+}
+
+@mixin grid--background-color($background-color) {
+    background-color: $background-color;
+}
+
 .grid {
     display: grid;
     margin: 0;
@@ -34,12 +46,23 @@
     @include grid--margin(0 auto);
 }
 
+.grid--margin-155px-0-0-0 {
+    @include grid--margin(155px 0 0 0);
+}
+
 //
 
 // padding
-
 .grid--padding-13px-103px {
     padding: 13px 103px;
+}
+
+.grid--padding-70px-103px-0-103px {
+    padding: 70px 103px 0 103px;
+}
+
+.grid--padding-70px-0-74px-0 {
+    padding: 70px 0 74px 0;
 }
 
 //
@@ -73,6 +96,10 @@
     @include grid--row-gap(6px);
 }
 
+.grid--row-gap-70px {
+    @include grid--row-gap(70px);
+}
+
 //
 
 // column-gap
@@ -93,6 +120,10 @@
 
 .grid--width-416px {
     @include grid--width(416px);
+}
+
+.grid--width-1160px {
+    @include grid--width(1160px);
 }
 
 //
@@ -144,3 +175,20 @@
 }
 
 //
+
+// height
+.grid--height-400px {
+    @include grid--height(400px);
+}
+
+//
+.grid--box-sizing-border-box {
+    @include grid--box-sizing(border-box);
+}
+
+//
+
+// background-color
+.grid--background-color-gray-000 {
+    @include grid--background-color(color.$gray-000);
+}

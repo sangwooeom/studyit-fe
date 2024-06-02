@@ -22,6 +22,7 @@ export default function Grid(props: GridProps) {
         margin, 
         padding, 
         width, 
+        height,
         justifyContent,
         gridAutoFlow,
         gridTemplateColumns,
@@ -30,6 +31,8 @@ export default function Grid(props: GridProps) {
         border,
         borderBottom,
         borderRadius,
+        boxSizing,
+        backgroundColor,
         children 
     } = props;
 
@@ -41,6 +44,7 @@ export default function Grid(props: GridProps) {
                     [styles[`${getClassName('grid--margin', margin)}`]]: margin,
                     [styles[`${getClassName('grid--padding', padding)}`]]: padding,
                     [styles[`${getClassName('grid--width', width)}`]]: width,
+                    [styles[`${getClassName('grid--height', height)}`]]: height,
                     [styles[`${getClassName('grid--justify-content', justifyContent)}`]]: justifyContent,
                     [styles[`${getClassName('grid--grid-auto-flow', gridAutoFlow)}`]]: gridAutoFlow,
                     [styles[`${getClassName('grid--grid-template-columns', gridTemplateColumns)}`]]: gridTemplateColumns,
@@ -49,6 +53,8 @@ export default function Grid(props: GridProps) {
                     [styles[`${getClassName('grid--border', border)}`]]: border,
                     [styles[`${getClassName('grid--border-bottom', borderBottom)}`]]: borderBottom,
                     [styles[`${getClassName('grid--border-radius', borderRadius)}`]]: borderRadius,
+                    [styles[`${getClassName('grid--box-sizing', boxSizing)}`]]: boxSizing,
+                    [styles[`${getClassName('grid--background-color', backgroundColor)}`]]: backgroundColor,
                 }
             )}
         >

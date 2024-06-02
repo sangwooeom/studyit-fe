@@ -2,7 +2,9 @@ declare interface TextProps {
     lineHeight?: string;
     color?: string;
     fontSize?: string;
+    fontWeight?: string;
     textAlign?: "left" | "right" | "center" | "justify" | "initial" | "inherit";
+    margin?: string;
     children?: React.ReactNode;
 }
 
@@ -35,13 +37,14 @@ declare interface ButtonProps {
 declare interface LinkProps {
     to?: string;
     type: LinkType;
-    children: string;
+    children?: string;
 }
 
 declare interface GridProps {
     margin?: string;
     padding?: string;
     width?: string;
+    height?: string;
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "start" | "initial" | "inherit";
     gridAutoFlow?: "column" | "row" | "dense" | "row dense" | "column dense";
     rowGap?: string | "normal" | "initial" | "inherit";
@@ -51,6 +54,7 @@ declare interface GridProps {
     borderRadius?: string;
     backgroundColor?: string;
     gridTemplateColumns?: string;
+    boxSizing?: "content-box" | "border-box" | "inherit" | "initial" | "revert" | "revert-layer" | "unset";
     children?: React.ReactNode;
 }
 
@@ -71,15 +75,29 @@ declare interface IconButtonProps {
 }
 
 declare interface LoginRequest {
-    id: string;
+    email: string;
     password: string;
 }
 
-declare interface LoginResponse {
+declare interface LoginResponseData {
     accessToken: string;
     refreshToken: string;
 }
 
 declare interface ImageProps {
     type: ImageType;
+}
+
+declare interface ModalProps {
+    width: string;
+    height: string;
+    children?: React.ReactNode;
+}
+
+declare interface ErrorData {
+    error: string;
+    message: string;
+    path: string;
+    status: number;
+    timestampe: number;
 }
