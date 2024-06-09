@@ -3,7 +3,7 @@ import Button from "../../../components/Button"
 import Grid from "../../../components/Grid"
 import Input from "../../../components/Input"
 import { ButtonType, ValidationType } from "../../../enum"
-import { useCallback, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import { 
     checkEmail, 
     checkNickname, 

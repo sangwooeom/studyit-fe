@@ -1,15 +1,9 @@
 import { useState } from "react";
 import styles from '../scss/components/Input.module.scss';
 import cn from "classnames";
-import visibilityOffIcon from '../img/ic_visibility_off_24dp.svg';
-import visibilityOnIcon from '../img/ic_visibility_on_24dp.svg';
 import { ValidationType } from "../enum";
 import Grid from "./Grid";
 import Text from "./Text";
-
-function getIconImg(hide: boolean): string {
-    return hide ? visibilityOffIcon : visibilityOnIcon;
-}
 
 export default function Input(props: InputProps) {
     const { label, placeholder, type, description, errorMessage, validation } = props;
