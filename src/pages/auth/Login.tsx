@@ -10,11 +10,6 @@ import { getErrorMessage, saveTokenInLocalStorage } from '../../utils/commonUtil
 import { AxiosResponse } from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-// function validateEmail(email: string): boolean {
-//     const reg = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-//     return reg.test(email);
-// }
-
 export default function Login() {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');

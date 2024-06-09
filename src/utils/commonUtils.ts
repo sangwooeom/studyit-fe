@@ -16,6 +16,6 @@ export function saveTokenInLocalStorage(response: AxiosResponse<LoginResponseDat
     localStorage.setItem('refreshToken', refreshToken);
 }
 
-function getResponseData(response: AxiosResponse<any, any>) {
+export function getResponseData(response: AxiosResponse<any, any>) {
     return response.data;
 }

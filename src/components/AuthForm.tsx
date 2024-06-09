@@ -8,7 +8,7 @@ export default function AuthForm(props: AuthFormProps) {
     const { isShowPrevButton, to, title, description, children } = props;
 
     return (
-        <Grid margin="80px auto 0 auto" width="416px" rowGap="40px">
+        <Grid margin="80px auto 80px auto" width="416px" rowGap="40px">
             {isShowPrevButton && <div><Link type={LinkType.PREV_LINK} to={to}/></div>}
             <Grid rowGap="40px" margin="0 auto" width="400px">
                 <Grid rowGap="10px">

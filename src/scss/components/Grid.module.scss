@@ -42,6 +42,10 @@
     @include grid--margin(80px auto 0 auto);
 }
 
+.grid--margin-80px-auto-80px-auto {
+    @include grid--margin(80px auto 80px auto);
+}
+
 .grid--margin-0-auto {
     @include grid--margin(0 auto);
 }

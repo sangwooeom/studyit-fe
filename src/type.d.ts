@@ -19,10 +19,10 @@ declare interface InputProps {
     label?: string;
     placeholder?: string;
     type: "text" | "password";
+    validation?: ValidationType;
     description?: string;
     errorMessage?: string;
     onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
-    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur?: (event: React.FocusEvent<HTMLInputElement, Element>) => void;
     validate?: (value: string) => boolean;
 }
@@ -100,4 +100,22 @@ declare interface ErrorData {
     path: string;
     status: number;
     timestampe: number;
+}
+
+declare interface CheckResult {
+    result: boolean;
+    message?: string;
+}
+
+declare interface InfoValidation {
+    [email: string]: ValidationType,
+    [password: string]: ValidationType,
+    [passwordConfirm: string]: ValidationType,
+    [nickname: string]: ValidationType
+}
+
+declare interface JoinRequestData {
+    [email: string]: string,
+    [password: string]: string,
+    [nickname: string]: string
 }

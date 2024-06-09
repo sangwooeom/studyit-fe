@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from '../scss/components/input.module.scss';
+import styles from '../scss/components/Input.module.scss';
 import cn from "classnames";
 import visibilityOffIcon from '../img/ic_visibility_off_24dp.svg';
 import visibilityOnIcon from '../img/ic_visibility_on_24dp.svg';
@@ -11,31 +11,19 @@ function getIconImg(hide: boolean): string {
     return hide ? visibilityOffIcon : visibilityOnIcon;
 }
 
-
 export default function Input(props: InputProps) {
-    const { label, placeholder, type, description, errorMessage } = props;
+    const { label, placeholder, type, description, errorMessage, validation } = props;
 
     const [hide, setHide] = useState(true);
-    const [validation, setValidation] = useState(ValidationType.NORMAL);
+    //const [validation, setValidation] = useState(ValidationType.NORMAL);
     
     function onInput(event: React.FormEvent<HTMLInputElement>) {
         if (props.onInput) props.onInput(event);
-    }
-
-    function onChange(event: React.ChangeEvent<HTMLInputElement>) {
-        if (props.onChange) props.onChange(event);
+        // validate(event.currentTarget.value);
     }
 
     function onBlur(event: React.FocusEvent<HTMLInputElement, Element>) {
         if (props.onBlur) props.onBlur(event);
-        validate(event.currentTarget.value);
-    }
-
-    function validate(value: string) {
-        if (props.validate) {
-            if (props.validate(value)) setValidation(ValidationType.VALIDATE);
-            else setValidation(ValidationType.NON_VALIDATE);
-        }
     }
 
     return (
@@ -52,15 +40,19 @@ export default function Input(props: InputProps) {
                                 [styles['warning']]: validation === ValidationType.NON_VALIDATE
                             }
                         )}
-                        onInput={onInput} 
-                        onChange={onChange}
+                        onInput={onInput}
                         onBlur={onBlur}
                         placeholder={placeholder || ''} 
                         type="text"
                     />
                 }
                 {type === "password" && 
-                <Grid gridAutoFlow="column" gridTemplateColumns="auto 54px" borderRadius="6px" border="1px solid gray-200">
+                <Grid 
+                    gridAutoFlow="column" 
+                    gridTemplateColumns="auto 54px" 
+                    borderRadius="6px" 
+                    border={validation === ValidationType.NON_VALIDATE ? "1px solid red" : "1px solid gray-200"}
+                >
                     <input 
                         className={cn(
                             styles['input'], 
@@ -70,7 +62,6 @@ export default function Input(props: InputProps) {
                             }
                         )}
                         onInput={onInput} 
-                        onChange={onChange}
                         onBlur={onBlur}
                         placeholder={placeholder || ''} 
                         type={hide ? "password" : "text"} 
@@ -79,13 +70,13 @@ export default function Input(props: InputProps) {
                         className={cn(
                             styles['iconBtn'],
                             {
-                                [styles['right']]: validation === ValidationType.VALIDATE,
+                                [styles['visibility-off']]: hide,
+                                [styles['visibility-on']]: !hide,
+                                [styles['right']]: validation === ValidationType.VALIDATE
                             }
                         )}
                         onClick={() => setHide(!hide)}
-                    >
-                        <img src={getIconImg(hide)} />
-                    </button>
+                    ></button>
                 </Grid>}
                 {description && <Text color="gray-500" fontSize="14px">{description}</Text>}
                 {validation === ValidationType.NON_VALIDATE && errorMessage && <Text color="red" fontSize="14px">{errorMessage}</Text>}
