@@ -17,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",
+    "studyit-frontend": "file:",
     "styled-components": "^6.1.9"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "sass": "^1.77.0",
     "storybook": "^8.0.9",
+    "tailwind": "^4.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
