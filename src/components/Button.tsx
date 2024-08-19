@@ -18,7 +18,8 @@ export default function Button(props: ButtonProps) {
                 {
                     [styles['btn--kakao']]: type === ButtonType.KAKAO_BUTTON,
                     [styles['btn--google']]: type === ButtonType.GOOGLE_BUTTON,
-                    [styles['btn--study-create-btn']]: type === ButtonType.STUDY_CREATE_BTTUN,
+                    [styles['btn--secondary-btn']]: type === ButtonType.SECONDARY_BUTTON,
+                    [styles['btn--study-create-btn']]: type === ButtonType.STUDY_CREATE_BUTTUN,
                 }
             )} 
             onClick={onClick} 

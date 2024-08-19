@@ -1,6 +1,8 @@
 import { ImageType } from "../enum";
 import {
-    logo
+    logo,
+    prevBtnImg,
+    mainImg01
 } from '../img';
 import styles from '../scss/components/Image.module.scss';
 import cn from 'classnames';
@@ -9,6 +11,10 @@ function getSrc(type: ImageType) {
     switch(type) {
         case ImageType.LOGO_IMG:
             return logo;
+        case ImageType.PREV_BUTTON_IMG:
+            return prevBtnImg;
+        case ImageType.MAIN_IMG_01:
+            return mainImg01;
     }
 }
 

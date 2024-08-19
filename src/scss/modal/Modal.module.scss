@@ -1,0 +1,42 @@
+@use '../color';
+
+@mixin popup--width($width) {
+    width: $width;
+    left: calc(50% - $width / 2);
+}
+
+@mixin popup--height($height) {
+    height: $height;
+    top: calc(50% - $height / 2);
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+    position: fixed;
+    background-color: color.$white;
+    border-radius: 6px;
+    padding: 30px;
+}
+
+// width
+.popup--width-520px {
+    @include popup--width(520px);
+}
+
+// 
+
+// height
+.popup--height-363px {
+    @include popup--height(363px);
+}
+
+//

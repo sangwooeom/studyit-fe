@@ -24,65 +24,20 @@
 .iconBtn {
     background-color: inherit;
     border: none;
-    margin: 12px 15px;
-    width: 24px;
-    height: 24px;
+    border-radius: 0 6px 6px 0;
+    width: auto;
+    height: auto;
     cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.grid {
-    display: grid;
+.visibility-off {
+    background-image: url("../../img/ic_visibility_off_24dp.svg");
 }
 
-.grid--row-gap-8px {
-    row-gap: 8px;
-}
-
-.grid--row-gap-6px {
-    row-gap: 6px;
-}
-
-.grid--grid-auto-flow-column {
-    grid-auto-flow: column;
-}
-
-.grid--grid-template-columns-auto-54px{
-    grid-template-columns: auto 54px;
-}
-
-.grid--border-radius-6px {
-    border-radius: 6px;
-}
-
-.grid--border-1px-solid-gray {
-    border: 1px solid #E4E7EC
-}
-
-.text {
-    color: #101828;
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    letter-spacing: -1px;
-    font-weight: normal;
-}
-
-.text--color-gray {
-    color: #667085;
-}
-
-.text--color-red {
-    color: #F36355;
-}
-
-.text--font-size-14px {
-    font-size: 14px;
-}
-
-.text--font-size-16px {
-    font-size: 16px;
-}
-
-.text--line-height-20px {
-    line-height: 20px;
+.visibility-on {
+    background-image: url("../../img/ic_visibility_on_24dp.svg");
 }
 
 .warning {

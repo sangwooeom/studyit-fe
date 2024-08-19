@@ -16,6 +16,14 @@
     text-align: $text-align;
 }
 
+@mixin text--font-weight($font-weight) {
+    font-weight: $font-weight;
+}
+
+@mixin text--margin($margin) {
+    margin: $margin;
+}
+
 .text {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     letter-spacing: -1px;
@@ -28,7 +36,7 @@
 }
 
 .text--font-size-16px {
-    @include text--font-size(14px);
+    @include text--font-size(16px);
 }
 
 //
@@ -57,9 +65,34 @@
     @include text--color(color.$red);
 }
 
+.text--color-blue {
+    @include text--color(color.$blue);
+}
+
+.text--color-gray-600 {
+    @include text--color(color.$gray-600);
+}
+
+
 //
 
 // text-align
 .text--text-align-center {
     @include text--text-align(center);
 }
+
+//
+
+// font-weight
+.text--font-weight-bold {
+    @include text--font-weight(bold);
+}
+
+//
+
+// margin
+.text--margin-2px-0 {
+    margin: 2px 0;
+}
+
+//

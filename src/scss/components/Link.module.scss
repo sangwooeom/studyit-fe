@@ -25,3 +25,14 @@
     line-height: 19px;
     text-decoration: none;
 }
+
+.link--prev-link {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 1px;
+    padding: 8px 1px;
+    border: none;
+    background-color: color.$white;
+    text-decoration: none;
+}

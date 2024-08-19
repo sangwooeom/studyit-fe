@@ -4,6 +4,7 @@ import googleIcon from './google_icon.svg';
 import kakaoIcon from './kakao_icon.svg';
 import logo from './logo.svg';
 import prevBtnImg from './prev_btn.svg';
+import mainImg01 from './img_main_01.svg';
 
 export {
     visibilityOffIcon,
@@ -11,5 +12,6 @@ export {
     googleIcon,
     kakaoIcon,
     logo,
-    prevBtnImg
+    prevBtnImg,
+    mainImg01
 }
