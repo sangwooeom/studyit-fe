@@ -1,0 +1,125 @@
+.container {
+    display: grid;
+    row-gap: 70px;
+
+    .gate {
+        background-color: #F9FAFB;
+
+        .area {
+            margin: 0 auto;
+            width: 1160px;
+            padding: 0 103px;
+            display: grid;
+            justify-content: space-between;
+            grid-auto-flow: column;
+
+            .img {
+                margin-top: 63px;
+                margin-bottom: 43px;
+            }
+
+            .content {
+                margin-top: 70px;
+                margin-bottom: 74px;
+                display: grid;
+                row-gap: 40px;
+
+                .text {
+                    display: grid;
+                    row-gap: 6px;
+
+                    h1 {
+                        font-size: 40px;
+                        color: #101828;
+                        line-height: 55px;
+                    }
+
+                    p {
+                        color: #475467;
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                }
+
+                .btn {
+                    button {
+                        width: 172px;
+                        padding: 14px;
+                        border: none;
+                        background-color: #175CD3;
+                        color: #FFFFFF;
+                        font-size: 16px;
+                        line-height: 20px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        display: grid;
+        row-gap: 60px;
+
+        .list {
+            display: grid;
+            row-gap: 24px;
+
+            .header {
+                margin: 0 auto;
+                width: 1160px;
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 20px;
+                    color: #101828;
+                    line-height: 25px;
+                }
+
+                a {
+                    color: #667085;
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-decoration: none;
+                }
+            }
+
+            .content {
+                margin: 0 auto;
+                width: 1270px;
+                display: grid;
+                grid-template-columns: 40px 1160px 40px;
+                column-gap: 15px;
+
+                .btn {
+
+                    button {
+                        width: 24px;
+                        height: 24px;
+                        cursor: pointer;
+                        border: none;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-color: #FFFFFF;
+                    }
+
+                    .prevBtn {
+                        background-image: url(../../img/ic_chevron_left_24dp.svg);
+                    }
+
+                    .nextBtn {
+                        background-image: url(../../img/ic_chevron_right_24dp.svg);
+                    }
+                }
+
+                .cards {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    column-gap: 20px;
+                }
+            }
+        }
+    }
+}

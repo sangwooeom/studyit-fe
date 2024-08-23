@@ -5,6 +5,8 @@ import kakaoIcon from './kakao_icon.svg';
 import logo from './logo.svg';
 import prevBtnImg from './prev_btn.svg';
 import mainImg01 from './img_main_01.svg';
+import iconBookmarkIn from './ic_bookmark_in_24dp.svg';
+import iconBookmarkNot from './ic_bookmark_not_24dp.svg';
 
 export {
     visibilityOffIcon,
@@ -13,5 +15,7 @@ export {
     kakaoIcon,
     logo,
     prevBtnImg,
-    mainImg01
+    mainImg01,
+    iconBookmarkIn,
+    iconBookmarkNot
 }

@@ -1,0 +1,43 @@
+.container {
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: grid;
+    row-gap: 16px;
+    border-radius: 6px;
+
+    .main {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 16px;
+        justify-content: space-between;
+
+        .description {
+            display: grid;
+            row-gap: 30px;
+
+            .header {
+                display: grid;
+                row-gap: 6px;
+
+                h4 {
+                    font-size: 16px;
+                    color: #101828;
+                    line-height: 28px;
+                }
+
+                .skill {
+                    color: #98A2B3;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            .status {
+                display: grid;
+                grid-auto-flow: column;
+                column-gap: 12px;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

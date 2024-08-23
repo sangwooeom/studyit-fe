@@ -10,7 +10,7 @@ export default function Input(props: InputProps) {
 
     const [hide, setHide] = useState(true);
     //const [validation, setValidation] = useState(ValidationType.NORMAL);
-    
+
     function onInput(event: React.FormEvent<HTMLInputElement>) {
         if (props.onInput) props.onInput(event);
         // validate(event.currentTarget.value);
@@ -24,10 +24,10 @@ export default function Input(props: InputProps) {
         <Grid rowGap="8px">
             {label && <Text color="gray-500" fontSize="16px" lineHeight="20px">{label}</Text>}
             <Grid rowGap="6px">
-                {type === "text" && 
+                {type === "text" &&
                     <input
                         className={cn(
-                            styles['input'], 
+                            styles['input'],
                             styles['input--text'],
                             {
                                 [styles['right']]: validation === ValidationType.VALIDATE,
@@ -36,31 +36,31 @@ export default function Input(props: InputProps) {
                         )}
                         onInput={onInput}
                         onBlur={onBlur}
-                        placeholder={placeholder || ''} 
+                        placeholder={placeholder || ''}
                         type="text"
                     />
                 }
-                {type === "password" && 
-                <Grid 
-                    gridAutoFlow="column" 
-                    gridTemplateColumns="auto 54px" 
-                    borderRadius="6px" 
+                {type === "password" &&
+                <Grid
+                    gridAutoFlow="column"
+                    gridTemplateColumns="auto 54px"
+                    borderRadius="6px"
                     border={validation === ValidationType.NON_VALIDATE ? "1px solid red" : "1px solid gray-200"}
                 >
-                    <input 
+                    <input
                         className={cn(
-                            styles['input'], 
+                            styles['input'],
                             styles['input--password'],
                             {
                                 [styles['right']]: validation === ValidationType.VALIDATE,
                             }
                         )}
-                        onInput={onInput} 
+                        onInput={onInput}
                         onBlur={onBlur}
-                        placeholder={placeholder || ''} 
-                        type={hide ? "password" : "text"} 
+                        placeholder={placeholder || ''}
+                        type={hide ? "password" : "text"}
                     />
-                    <button 
+                    <button
                         className={cn(
                             styles['iconBtn'],
                             {
