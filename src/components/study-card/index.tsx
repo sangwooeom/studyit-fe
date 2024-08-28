@@ -2,8 +2,18 @@ import Badge, { BadgeType } from '../badge';
 import BookmarkCheckbox from '../bookmark-checkbox';
 import styles from './style.module.scss';
 import cn from 'classnames';
+import { useState } from 'react';
 
-export default function StudyCard() {
+interface StudyCardProps {
+    title: string;
+
+}
+
+export default function StudyCard(props: StudyCardProps) {
+    const [ checked, setChecked ] = useState(false);
+
+
+
     return (
         <div className={cn(styles.container)}>
             <div className={cn(styles.main)}>
@@ -17,11 +27,14 @@ export default function StudyCard() {
                     </div>
                 </div>
                 <div>
-                    <BookmarkCheckbox />
+                    <BookmarkCheckbox onClick={() => setChecked(!checked)} checked={checked}/>
                 </div>
             </div>
             <div className={styles.people}>
-                <div>모집인원 2/5</div>
+                <div className={styles.cnt}>
+                    <span>모집인원</span>
+                    <span>2/5</span>
+                </div>
                 <div>포지션 현황</div>
             </div>
         </div>
